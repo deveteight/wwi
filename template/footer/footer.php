@@ -43,7 +43,6 @@
 		Copyright &copy; <?php echo date("Y"); ?> <span>WideWorldImport - ICTM1C5</span>
 	</div>
 </footer>
-
 </body>
 </html>
 

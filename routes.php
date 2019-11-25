@@ -37,7 +37,7 @@ switch ($_GET['page']):
 	// ALLEEN ALS DE GEBRUIKER IS INGELOGD
 	case 'profiel' :
 		if (IsGebruikerIngelogd()):
-			require __DIR__ . '/views/profiel.php';
+			require __DIR__ . '/views/ingelogd/profiel.php';
 		else:
 			require __DIR__ . '/views/home.php';
 		endif;
@@ -45,7 +45,7 @@ switch ($_GET['page']):
 
 	case 'beheer':
 		if (IsGebruikerIngelogd()):
-			require __DIR__ . '/views/beheer.php';
+			require __DIR__ . '/views/ingelogd/beheer.php';
 		else:
 			require __DIR__ . '/views/home.php';
 		endif;

@@ -1,6 +1,6 @@
 DirectoryIndex index.php index.html index.htm
 RewriteEngine On
-RewriteBase /school/www
+RewriteBase /wwi
 RewriteCond %{REQUEST_FILENAME}  -f [OR]
 RewriteCond %{REQUEST_FILENAME} !-f
 

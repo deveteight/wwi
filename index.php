@@ -5,8 +5,8 @@
 		session_start();
 	endif;
 
-	// Define standard sitelink
-	define("SITELINK", "http://localhost/school/www/");
+	// Define standard sitelink met / erachter
+	define("SITELINK", "http://localhost/wwi/");
 
 	// Standard variables
 	define("MINIMUM_STOCK", 10000);
@@ -17,10 +17,10 @@
 	define("START_DAG", 31);
 
 	// Define standard maps
-	define("IMAGES", SITELINK . "images/");
-	define("CSS", SITELINK . "/css/");
-	define("JAVASCRIPT", SITELINK . "/javascript/");
-	define("FONTS", SITELINK . "/fonts/");
+	define("IMAGES", SITELINK . "assets/images/");
+	define("CSS", SITELINK . "/assets/css/");
+	define("JAVASCRIPT", SITELINK . "/assets/javascript/");
+	define("FONTS", SITELINK . "/assets/fonts/");
 
 	// Template
 	define("TEMPLATE", __DIR__ . "/template/");
@@ -31,7 +31,7 @@
 	// Require functies
 	require_once('includes/functions.php');
 
-	// Inladen van de header
+	// Inladen van de juiste header
 	if (IsGebruikerIngelogd()):
 		require_once('template/header/ingelogd.php');
 	else:
@@ -41,7 +41,7 @@
 	// Routing om de juiste pagina te openen
 	require_once('routes.php');
 
-	// Inladen van de footer
+	// Inladen van de juiste footer
 	if (IsGebruikerIngelogd()):
 		require_once('template/footer/footer.php');
 	else:
