@@ -1,6 +1,10 @@
 # World Wide Import
 ### Configuratie om het werkend te krijgen:
 
+- app.ini (/app.ini)
+    -
+    Om verbinding te maken met de database moet de app.ini worden aangevuld met data.
+
 - .htaccess (/.htaccess)
     - 
     Verander hierbij de RewriteBase naar de document root waar het project zich in bevindt. 
