@@ -1,0 +1,258 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:  #F4F6F8;
+}
+
+/*
+NAVIGATIEBALK
+*/
+
+ul.navbar-nav-down {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around !important;
+    flex-wrap: nowrap;
+    padding: 15px 0px;
+}
+
+@media screen and (max-width: 900px) {
+    ul.navbar-nav-down {
+        flex-direction: column;
+    }
+}
+
+.header-top {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0), 0 2px 2px rgba(0,0,0,0.23);
+    background: #F9B510 !important;
+}
+
+.header-midden {
+    background: white;
+}
+
+.header-midden a {
+    color: black;
+}
+
+.header-midden a:hover {
+    color: black;
+}
+
+.header-midden a:visited {
+    color: black;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+/*
+LINKJES
+*/
+
+.card-body {
+    padding: 2rem;
+}
+
+.card {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.card-body h5 {
+    color: #007bff;
+}
+
+.card > .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card {
+    /*border: none;*/
+}
+
+.sorteer {
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline;
+}
+
+.usp-product {
+    font-size: 0.9rem;
+    margin-left: 13px;
+}
+
+.card-body h5:hover {
+    color: black;
+}
+
+.card-body h5:visited {
+    color: black;
+}
+
+.navbar-nav-down > li > a {
+    font-size: 0.9rem;
+}
+
+.verlanglijst-knop {
+    border: 1px solid #ddd;
+    box-shadow: inset 0 -1px 0 0 #ddd;
+}
+
+.cta-knop-product-pagina {
+    max-width: 250px;
+    padding: 10px;
+}
+
+.product-knop {
+    margin-right: 35px !important;
+}
+
+.product-prijs {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-right: 35px;
+}
+
+.fa-star {
+    color: #28a745;
+}
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+.zoeken-tekst {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.zoeken-tekst span {
+    font-style: italic;
+}
+
+.product-prijs-voorraad {
+    align-items: center;
+}
+
+.breadcrumb {
+    background: none;
+}
+
+.breadcrumb > li > a {
+    color: black;
+}
+
+.breadcrumb > li + li::before {
+    content: '\f105';
+    font-family: FontAwesome;
+    padding: 0 5px;
+    font-size: 16px;
+    color: #212d6e;
+}
+
+.filter-tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resultaten {
+    font-weight: bold;
+}
+
+.filteraantal > h2 {
+    font-weight: bold;
+}
+
+.filteraantal {
+    margin: 10px 0px 25px ;
+}
+
+/*
+
+*/
+
+/*
+
+*/
+
+/*
+FOOTER
+*/
+
+footer {
+    background: #222;
+    color: #aaa;
+    padding-top: 10px;
+}
+
+footer a {
+    color: #aaa;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer h3 {
+    color: #0894d1;
+    letter-spacing: 1px;
+    margin: 30px 0 20px;
+}
+
+footer .three-column {
+    overflow: hidden;
+}
+
+footer .three-column li{
+    width: 33.3333%;
+    float: left;
+    padding: 5px 0;
+}
+
+footer .socila-list {
+    overflow: hidden;
+    margin: 20px 0 10px;
+}
+
+footer .socila-list li {
+    float: left;
+    margin-right: 3px;
+    opacity: 0.7;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+footer .socila-list li:hover {
+    opacity: 1;
+}
+
+footer .img-thumbnail {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #444;
+    margin-bottom: 5px;
+}
+
+footer .copyright {
+    padding: 15px 0;
+    background: #333;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+footer .copyright span {
+    color: #0894d1;
+}

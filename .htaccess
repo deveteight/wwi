@@ -1,0 +1,22 @@
+DirectoryIndex index.php index.html index.htm
+RewriteEngine On
+RewriteBase /school/www
+RewriteCond %{REQUEST_FILENAME}  -f [OR]
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# STANDAARD REWRITE NAAR EEN PAGINA
+RewriteRule ^([A-Za-z0-9-]+)/?$ index.php?page=$1 [L,QSA]
+
+# WINKELWAGEN
+RewriteRule ^(winkelwagen)/([0-9-]+)/([A-Za-z-]+)/?$ index.php?page=$1&id=$2&actie=$3 [L,QSA]
+RewriteRule ^(winkelwagen)/([0-9-]+)/([A-Za-z-]+)/([0-9-]+)/?$ index.php?page=$1&id=$2&actie=$3&aantal=$4 [L,QSA]
+
+# PAGINA + ID
+RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ index.php?page=$1&id=$2 [L,QSA]
+RewriteRule ^([A-Za-z0-9-]+)/([0-9]+)/([A-Za-z0-9-]+)/?$ index.php?page=$1&id=$2&product=$3 [L,QSA]
+
+#CATEGORIE
+RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([0-9]+)/?$ index.php?page=$1&cat=$2&id=$3 [L,QSA]
+RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([0-9]+)/([A-Za-z0-9-]+)/?$ index.php?page=$1&cat=$2&id=$3&pagina=$4 [L,QSA]
+RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([0-9]+)/([A-Za-z0-9-]+)/([0-9]+)/?$ index.php?page=$1&cat=$2&id=$3&pagina=$4&paginanummer=$5 [L,QSA]
+RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([0-9]+)/([A-Za-z0-9-]+)/([0-9]+)/([A-Za-z0-9-:,]+)/?$ index.php?page=$1&cat=$2&id=$3&pagina=$4&paginanummer=$5&filter=$6 [L,QSA]
