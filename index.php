@@ -25,6 +25,9 @@
 	// Template
 	define("TEMPLATE", __DIR__ . "/template/");
 
+	// Inladen van de configuratie
+	$config = parse_ini_file('app.ini');
+
 	// Require database connectie
 	require_once('includes/database.php');
 
