@@ -16,7 +16,6 @@ endif;
 
 // Bekijk of er een actie gaande is met add
 if (isset($_GET['actie']) && $_GET['actie'] == "add"):
-	print_r($_SESSION['winkelwagen']);
 	$_SESSION['winkelwagen'][$_GET['id']] = $_GET['aantal'];
 //    GaNaarPagina('product/' . $_GET['id'], "Toegevoegd aan winkelmandje");
 endif;

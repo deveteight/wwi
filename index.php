@@ -11,10 +11,13 @@
 	// Standard variables
 	define("MINIMUM_STOCK", 10000);
 
-	// Lancering webshop
+	// Lancering webshop voor gratis verzending
 	define("START_JAAR", 2020);
 	define("START_MAAND", 05);
 	define("START_DAG", 31);
+
+	// Einde gratis verzending
+	define("EINDE_JAAR", 2022);
 
 	// Define standard maps
 	define("IMAGES", SITELINK . "assets/images/");
@@ -28,6 +31,9 @@
 	// Inladen van de configuratie
 	$config = parse_ini_file('app.ini');
 
+	// Require queries
+	require_once('includes/queries.php');
+
 	// Require database connectie
 	require_once('includes/database.php');
 
@@ -36,7 +42,7 @@
 
 	// Inladen van de juiste header
 	if (IsGebruikerIngelogd()):
-		require_once('template/header/ingelogd.php');
+		require_once('template/header/header_ingelogd.php');
 	else:
 		require_once('template/header/header.php');
 	endif;

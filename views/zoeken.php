@@ -12,9 +12,7 @@
     // Je hebt gezocht naar $_GET['id], hieronder een overzicht...
     // Prijzen omzetten naar euro van dollar (USD)
 	else:
-
 		$Producten = ZoekDoorProducten($_GET['id']);
-//		$aantalItems = count($x);
 		?>
 <h2 class="zoeken-tekst">Je zocht naar '<span><?php echo $_GET['id'] ?></span>' - <?php echo $Producten[0]['aantal'] . " producten gevonden"?></h2>
 <div class="row">
@@ -42,7 +40,7 @@
                 <?php if($value['QuantityOnHand'] >= MINIMUM_STOCK): ?>
                     <p style="font-size: 0.9rem"><i class="fa fa-check-circle" style="color: rgb(37, 156, 65)"></i> Op voorraad</p>
                 <?php else: ?>
-                    <p style="font-size: 0.9rem"><i class="fa fa-check-circle" style="color: rgb(158, 27, 40)"></i> Niet op voorraad</p>
+                    <p style="font-size: 0.9rem"><i class="fa fa-times-circle" style="color: rgb(158, 27, 40)"></i> Niet op voorraad</p>
                 <?php endif; ?>
                 <div class="sorteer">
                     <p style="font-weight: bold; font-size: 1.15rem">&euro;<?php echo DollarToEuro($value['UnitPrice']); ?></p>

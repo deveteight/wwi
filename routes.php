@@ -30,30 +30,31 @@ switch ($_GET['page']):
 	case 'winkelwagen' :
 		require __DIR__ . '/views/winkelwagen.php';
 		break;
-	case 'verlanglijst' :
-		require __DIR__ . '/views/verlanglijstje.php';
-		break;
-
 	// ALLEEN ALS DE GEBRUIKER IS INGELOGD
+	case 'verlanglijst' :
+		if (IsGebruikerIngelogd()):
+			require __DIR__ . '/views/gebruiker/verlanglijst.php';
+		else:
+			require __DIR__ . '/views/home.php';
+		endif;
+		break;
 	case 'profiel' :
 		if (IsGebruikerIngelogd()):
-			require __DIR__ . '/views/ingelogd/profiel.php';
+			require __DIR__ . '/views/gebruiker/profiel.php';
 		else:
 			require __DIR__ . '/views/home.php';
 		endif;
 		break;
-
 	case 'beheer':
 		if (IsGebruikerIngelogd()):
-			require __DIR__ . '/views/ingelogd/beheer.php';
+			require __DIR__ . '/views/gebruiker/beheer.php';
 		else:
 			require __DIR__ . '/views/home.php';
 		endif;
 		break;
-
 	case 'uitloggen' :
 		if (IsGebruikerIngelogd()):
-			require __DIR__ . '/views/uitloggen.php';
+			require __DIR__ . '/views/gebruiker/uitloggen.php';
 		else:
 			require __DIR__ . '/views/home.php';
 		endif;
